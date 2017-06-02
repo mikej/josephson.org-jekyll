@@ -4,6 +4,16 @@ layout: default
 
 <div class="home">
 
+  <h1 class="page-heading">Personal projects</h1>
+
+  <ul class="post-list">
+    {% for project in site.projects %}
+      <li>
+          <a class="" href="{{ project.external_url }}">{{ project.title | escape }}</a>: {{ project.description }}
+      </li>
+    {% endfor %}
+  </ul>
+
   <h1 class="page-heading">Posts</h1>
   
   {{ content }}
