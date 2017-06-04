@@ -15,6 +15,23 @@ layout: default
     {% endfor %}
   </ul>
 
+  <h1 class="page-heading">Recent talks</h1>
+
+  <ul class="my-list">
+    {% for talk in site.talks reversed %}
+      <li>
+          <strong>{{ talk.title | escape }}</strong><br>
+          at <a href="{{ talk.external_url}}"</a>{{ talk.event | escape }}</a><br>
+          {% if talk.permalink %}
+            <a href="{{talk.url | relative_url }}">notes</a>
+          {% endif %}
+          {% if talk.slides %}
+            <a href="{{talk.slides | relative_url }}">slides</a>
+          {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
   <h1 class="page-heading">Posts</h1>
   
   {{ content }}
