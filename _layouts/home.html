@@ -4,6 +4,8 @@ layout: default
 
 <div class="home">
 
+  {{ content }}
+
   <h1 class="page-heading">Personal projects</h1>
 
   <ul class="my-list">
@@ -33,8 +35,8 @@ layout: default
   </ul>
 
   <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
+
+
 
   <ul class="post-list">
     {% for post in site.posts %}
