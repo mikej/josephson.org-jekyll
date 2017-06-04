@@ -9,7 +9,8 @@ layout: default
   <ul class="my-list">
     {% for project in site.projects %}
       <li>
-          <a class="" href="{{ project.external_url }}">{{ project.title | escape }}</a>: {{ project.description }}
+          <strong>{{ project.title | escape }}</strong>: {{ project.description }}
+          <a href="{{ project.url}}"</a>details</a>
       </li>
     {% endfor %}
   </ul>
