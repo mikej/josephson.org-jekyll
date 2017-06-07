@@ -2,16 +2,6 @@
 layout: page
 title: Progressions
 external_url: https://progressions.io
-description: Progressions is yada yada
+description: An app to help with making better use of small blocks of available time each day. It's based on the ideas I wrote about in <a href="sep">Separate The Planning and The Doing</a>.
 permalink: projects/progressions
 ---
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
