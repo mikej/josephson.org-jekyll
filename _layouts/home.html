@@ -22,8 +22,8 @@ layout: default
   <ul class="my-list">
     {% for talk in site.talks reversed %}
       <li>
-          <strong>{{ talk.title | escape }}</strong><br>
-          at <a href="{{ talk.external_url}}"</a>{{ talk.event | escape }}</a><br>
+          <strong>{{ talk.title | escape }}</strong> at <a href="{{ talk.external_url}}"</a>{{ talk.event | escape }}</a><br>
+          {% if talk.summary %}{{ talk.summary | escape }}<br>{% endif %}
           {% if talk.permalink %}
             <a href="{{talk.url | relative_url }}">notes</a>
           {% endif %}
