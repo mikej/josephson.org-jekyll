@@ -15,18 +15,30 @@ permalink: contact/
               message[obj.name] = obj.value;
             }
 
+            function messageSent() {
+                $('#messageResult').html('<strong>Message sent!</strong>');
+            }
+
+            function messageFailed() {
+                $('#messageResult').html('<strong>We have a problem :(</strong>');
+            }
+
             $.ajax({
               url: 'https://josephson.org/contact/api.php',
               type: 'POST',
               data: JSON.stringify(message),
               dataType: 'json',
-              contentType: 'application/json'
+              contentType: 'application/json',
+              success: messageSent,
+              error: messageFailed
             });
 
             return false;
         });
     });
 </script>
+
+<div id="messageResult"></div>
 
 <form action="#" id="contactForm" method="post">
 
