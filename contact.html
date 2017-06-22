@@ -4,7 +4,27 @@ title: Contact
 permalink: contact/
 ---
 
-<form action="#">
+<script>
+    $(function() {
+        console.log('add form submit handler');
+        $('#contactForm').on('submit', function() {
+            console.log('form submitted');
+            data = { email: 'user@example.com', message: 'hello' };
+
+            $.ajax({
+              url: 'https://josephson.org/contact/api.php',
+              type: 'POST',
+              data: JSON.stringify(data),
+              dataType: 'json',
+              contentType: 'application/json'
+            });
+
+            return false;
+        });
+    });
+</script>
+
+<form action="#" id="contactForm" method="post">
 
 <div>
     <label class="desc" id="title1" for="Field1">Full Name</label>
@@ -31,5 +51,7 @@ permalink: contact/
       <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
     </div>
   </div>
+
+  <button type="submit">Send it!</button>
 
 </form>
