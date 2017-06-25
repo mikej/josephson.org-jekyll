@@ -13,6 +13,19 @@ permalink: contact/
 
         $('#contactForm').on('submit', function() {
             $('#intro').slideUp(200);
+
+            if ($('#email').val().trim() === '') {
+                setAlert('alert-warning', 'Please enter your email address and a message');
+                $('#email').focus();
+                return false;
+            }
+
+            if ($('#message').val().trim() === '') {
+                setAlert('alert-warning', 'Please enter your email address and a message');
+                $('#message').focus();
+                return false;
+            }
+
             var data =  $('#contactForm').serializeArray();
             var message = {};
             for (obj of data) {
