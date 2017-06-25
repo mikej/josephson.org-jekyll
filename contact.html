@@ -12,6 +12,7 @@ permalink: contact/
         }
 
         $('#contactForm').on('submit', function() {
+            $('#intro').slideUp(200);
             var data =  $('#contactForm').serializeArray();
             var message = {};
             for (obj of data) {
