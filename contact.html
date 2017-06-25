@@ -4,24 +4,33 @@ title: Contact
 permalink: contact/
 ---
 
-<div id="wufoo-zk0ngxz15uanhw">
-Fill out my <a href="https://mjosephson.wufoo.co.uk/forms/zk0ngxz15uanhw">online form</a>.
-</div>
-<div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Online contact and registration forms from <a href="http://wufoo.co.uk">Wufoo</a>.</div>
-<script type="text/javascript">var zk0ngxz15uanhw;(function(d, t) {
-var s = d.createElement(t), options = {
-'userName':'mjosephson',
-'formHash':'zk0ngxz15uanhw',
-'autoResize':true,
-'height':'497',
-'async':true,
-'host':'wufoo.co.uk',
-'header':'show',
-'ssl':true};
-s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.co.uk/scripts/embed/form.js';
-s.onload = s.onreadystatechange = function() {
-var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-try { zk0ngxz15uanhw = new WufooForm();zk0ngxz15uanhw.initialize(options);zk0ngxz15uanhw.display(); } catch (e) {}};
-var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-})(document, 'script');</script>
+<div class="jumbotron">
+          <p class="lead">Get in touch using the form below or via email to
 
+
+        <script language="JavaScript"  type="text/javascript"><!--
+document.write('<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;' + '&#109;&#105;&#107;&#101;&#64;' + '&#106;&#111;&#115;&#101;&#112;' + '&#104;&#115;&#111;&#110;&#46;' + '&#111;&#114;&#103;' + '">' + '&#109;&#105;&#107;&#101;&#64;' + '&#106;&#111;&#115;&#101;&#112;' + '&#104;&#115;&#111;&#110;&#46;' + '&#111;&#114;&#103;' + '<\/a>');
+--></script><noscript><em>&#109;&#105;&#107;&#101;&#32;&#123;&#97;&#116;&#125;&#32;&#106;&#111;&#115;&#101;&#112;&#104;&#115;&#111;&#110;&#32;&#123;&#100;&#111;&#116;&#125;&#32;&#111;&#114;&#103;</em></noscript>.
+
+          </p>
+        </div>
+
+<form method="post">
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input value="" name="name" type="text" class="form-control" id="name" placeholder="Your name (optional)" autofocus>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input name="email" value="email" type="email" class="form-control" id="email" placeholder="Your email address (required)">
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" rows="10" class="form-control" id="message" placeholder=""></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+    <div id="internal">
+      <input name="comment" type="text">
+    </div>
+</form>

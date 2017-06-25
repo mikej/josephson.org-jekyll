@@ -1,0 +1,31 @@
+.event-tag {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: white;
+  background-color: #777;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.home-section-header {
+  margin-top: 10px;
+}
+
+ul.recent-items {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.recent-items > li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.home-section-separator {
+  display: none;
+}
