@@ -12,31 +12,35 @@ layout: default
 
   <div class="row marketing">
     <div class="col-lg-9">
-      <h3 class="home-section-header">Personal projects</h3>
+      {% if site.projects.size > 0 %}
+        <h3 class="home-section-header">Personal projects</h3>
+          <ul class="recent-items">
+            {% for project in site.projects %}
+              <li>
+                <strong>{{ project.title | escape }}</strong>: {{ project.description }}
+                <a href="{{ project.url}}"</a>read more &raquo;</a>
+              </li>
+            {% endfor %}
+          </ul>
+       <hr class="home-section-separator">
+      {% endif %}
+      {% if site.talks.size > 0 %}
+        <h3 class="home-section-header">Recent talks</h3>
         <ul class="recent-items">
-          {% for project in site.projects %}
-            <li>
-              <strong>{{ project.title | escape }}</strong>: {{ project.description }}
-              <a href="{{ project.url}}"</a>read more &raquo;</a>
-            </li>
-          {% endfor %}
-        </ul>
-     <hr class="home-section-separator">
-      <h3 class="home-section-header">Recent talks</h3>
-      <ul class="recent-items">
-      {% for talk in site.talks reversed %}
-      <li>
-          <strong>{{ talk.title | escape }}</strong> at <a href="{{ talk.external_url}}"</a>{{ talk.event | escape }}</a><br>
-          {% if talk.summary %}{{ talk.summary | escape }}<br>{% endif %}
-          {% if talk.permalink %}
-            <a href="{{talk.url | relative_url }}">notes</a>
-          {% endif %}
-          {% if talk.slides %}
-            <a href="{{talk.slides | relative_url }}">slides</a>
-          {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+        {% for talk in site.talks reversed %}
+        <li>
+            <strong>{{ talk.title | escape }}</strong> at <a href="{{ talk.external_url}}"</a>{{ talk.event | escape }}</a><br>
+            {% if talk.summary %}{{ talk.summary | escape }}<br>{% endif %}
+            {% if talk.permalink %}
+              <a href="{{talk.url | relative_url }}">notes</a>
+            {% endif %}
+            {% if talk.slides %}
+              <a href="{{talk.slides | relative_url }}">slides</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
 
     <div class="col-lg-3">
