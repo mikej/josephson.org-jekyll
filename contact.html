@@ -6,6 +6,11 @@ permalink: contact/
 
 <script>
     $(function() {
+
+        function setAlert(status, message) {
+            $('#messageResult').html('<div class="alert ' + status + '" role="alert">' + message + '</div>');
+        }
+
         $('#contactForm').on('submit', function() {
             var data =  $('#contactForm').serializeArray();
             var message = {};
@@ -14,11 +19,11 @@ permalink: contact/
             }
 
             function messageSent() {
-                $('#messageResult').html('<strong>Message sent!</strong>');
+                setAlert('alert-success', 'Thanks! Your message has been sent');
             }
 
             function messageFailed() {
-                $('#messageResult').html('<strong>We have a problem :(</strong>');
+                setAlert('alert-danger', 'Sorry, there was a problem sending your message. Please try again');
             }
 
             $.ajax({
