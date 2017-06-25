@@ -6,21 +6,25 @@ layout: default
 
   {{ content }}
 
-  <h1 class="page-heading">Personal projects</h1>
+  <div class="jumbotron">
+    <p class="lead">Hi. I'm Michael Josephson, a software developer in <a href="http://en.wikipedia.org/wiki/Manchester" title="">Manchester</a>, England.</nobr></p>
+  </div>
 
-  <ul class="my-list">
-    {% for project in site.projects %}
-      <li>
-          <strong>{{ project.title | escape }}</strong>: {{ project.description }}
-          <a href="{{ project.url}}"</a>read more &raquo;</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Recent talks</h1>
-
-  <ul class="my-list">
-    {% for talk in site.talks reversed %}
+  <div class="row marketing">
+    <div class="col-lg-9">
+      <h3 class="home-section-header">Personal projects</h3>
+        <ul class="recent-items">
+          {% for project in site.projects %}
+            <li>
+              <strong>{{ project.title | escape }}</strong>: {{ project.description }}
+              <a href="{{ project.url}}"</a>read more &raquo;</a>
+            </li>
+          {% endfor %}
+        </ul>
+     <hr class="home-section-separator">
+      <h3 class="home-section-header">Recent talks</h3>
+      <ul class="recent-items">
+      {% for talk in site.talks reversed %}
       <li>
           <strong>{{ talk.title | escape }}</strong> at <a href="{{ talk.external_url}}"</a>{{ talk.event | escape }}</a><br>
           {% if talk.summary %}{{ talk.summary | escape }}<br>{% endif %}
@@ -31,7 +35,13 @@ layout: default
             <a href="{{talk.slides | relative_url }}">slides</a>
           {% endif %}
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+    </div>
+
+    <div class="col-lg-3">
+      <!-- Recent activity -->
+    </div>
+  </div>
 
 </div>

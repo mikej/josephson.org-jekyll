@@ -40,34 +40,34 @@ permalink: contact/
 
 <div id="messageResult"></div>
 
-<form action="#" id="contactForm" method="post">
+<div class="jumbotron">
+          <p class="lead">Get in touch using the form below or via email to
 
-<div>
-    <label class="desc" id="title1" for="Field1">Full Name</label>
-    <div>
-      <input id="Field1" name="name" type="text" class="field text fn" value="" size="8" tabindex="1">
+
+        <script language="JavaScript"  type="text/javascript"><!--
+document.write('<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;' + '&#109;&#105;&#107;&#101;&#64;' + '&#106;&#111;&#115;&#101;&#112;' + '&#104;&#115;&#111;&#110;&#46;' + '&#111;&#114;&#103;' + '">' + '&#109;&#105;&#107;&#101;&#64;' + '&#106;&#111;&#115;&#101;&#112;' + '&#104;&#115;&#111;&#110;&#46;' + '&#111;&#114;&#103;' + '<\/a>');
+--></script><noscript><em>&#109;&#105;&#107;&#101;&#32;&#123;&#97;&#116;&#125;&#32;&#106;&#111;&#115;&#101;&#112;&#104;&#115;&#111;&#110;&#32;&#123;&#100;&#111;&#116;&#125;&#32;&#111;&#114;&#103;</em></noscript>.
+
+          </p>
+        </div>
+
+<form method="post">
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input value="" name="name" type="text" class="form-control" id="name" placeholder="Your name (optional)" autofocus>
     </div>
-  </div>
-
-  <div>
-    <label class="desc" id="title3" for="Field3">
-      Email
-    </label>
-    <div>
-      <input id="Field3" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="3">
-   </div>
-  </div>
-
-  <div>
-    <label class="desc" id="title4" for="Field4">
-      Message
-    </label>
-
-    <div>
-      <textarea id="Field4" name="message" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input name="email" value="email" type="email" class="form-control" id="email" placeholder="Your email address (required)">
     </div>
-  </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" rows="10" class="form-control" id="message" placeholder=""></textarea>
+    </div>
 
-  <button type="submit">Send it!</button>
+    <button type="submit" class="btn btn-primary">Send</button>
+    <div id="internal">
+      <input name="comment" type="text">
+    </div>
 
 </form>
