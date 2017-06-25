@@ -2,6 +2,21 @@
 layout: default
 ---
 
+<script>
+    $(function() {
+      function didFetchActivity(activity) {
+        $('#js-activity').html(activity);
+      }
+
+      $.ajax({
+        url: 'https://josephson.org/activity.php',
+        type: 'GET',
+        dataType: 'html',
+        success: didFetchActivity,
+      });
+    });
+</script>
+
 <div class="home">
 
   {{ content }}
@@ -44,6 +59,7 @@ layout: default
     </div>
 
     <div class="col-lg-3">
+      <div style="margin: 0px; padding: 0px;" id="js-activity"></div>
       <!-- Recent activity -->
     </div>
   </div>
