@@ -20,10 +20,13 @@ permalink: contact/
 
             function messageSent() {
                 setAlert('alert-success', 'Thanks! Your message has been sent');
+                $('#message').val('');
+                $('#name').focus();
             }
 
             function messageFailed() {
                 setAlert('alert-danger', 'Sorry, there was a problem sending your message. Please try again');
+                $('#name').focus();
             }
 
             $.ajax({
