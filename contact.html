@@ -6,9 +6,7 @@ permalink: contact/
 
 <script>
     $(function() {
-        console.log('add form submit handler');
         $('#contactForm').on('submit', function() {
-            console.log('form submitted');
             var data =  $('#contactForm').serializeArray();
             var message = {};
             for (obj of data) {
